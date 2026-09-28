@@ -78,31 +78,44 @@ export function assessLivestockRisk(input: AssessmentInput): AssessmentResult {
     nearbyCount = 2; // fallback baseline
   }
 
+  function norm(str: string): string {
+    return str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
+  const normalizedInputSymptoms = symptoms.map(s => norm(s));
+  const normSpecies = norm(species);
+
   // 2. Evaluate Clinical Rules
   for (const rule of DISEASE_RULES) {
-    // Check species eligibility
-    const speciesMatch = rule.targetSpecies.includes(species);
+    // Check species eligibility (case-insensitive substring/equality)
+    const speciesMatch = rule.targetSpecies.some(ts => norm(ts).includes(normSpecies) || normSpecies.includes(norm(ts)));
     if (!speciesMatch) continue;
 
     let matchPoints = 0;
     const reasons: string[] = [];
 
+    // Helper to check if rule symptom matches any input symptom
+    const matchSymptom = (ruleSymptom: string) => {
+      const target = norm(ruleSymptom);
+      return normalizedInputSymptoms.some(inputSym => inputSym.includes(target) || target.includes(inputSym));
+    };
+
     // Mandatory symptoms (must have at least one for high score)
-    const matchedMandatory = rule.mandatorySymptoms.filter(s => symptoms.includes(s));
+    const matchedMandatory = rule.mandatorySymptoms.filter(matchSymptom);
     if (matchedMandatory.length > 0) {
       matchPoints += (matchedMandatory.length / rule.mandatorySymptoms.length) * 45;
       reasons.push(`Presents hallmark symptoms: ${matchedMandatory.join(', ')}`);
     }
 
     // Characteristic symptoms
-    const matchedChar = rule.characteristicSymptoms.filter(s => symptoms.includes(s));
+    const matchedChar = rule.characteristicSymptoms.filter(matchSymptom);
     if (matchedChar.length > 0) {
       matchPoints += (matchedChar.length / rule.characteristicSymptoms.length) * 25;
       reasons.push(`Key clinical markers observed: ${matchedChar.join(', ')}`);
     }
 
     // Secondary symptoms
-    const matchedSec = rule.secondarySymptoms.filter(s => symptoms.includes(s));
+    const matchedSec = rule.secondarySymptoms.filter(matchSymptom);
     if (matchedSec.length > 0) {
       matchPoints += (matchedSec.length / rule.secondarySymptoms.length) * 15;
     }
