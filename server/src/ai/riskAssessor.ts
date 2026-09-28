@@ -158,6 +158,19 @@ export function assessLivestockRisk(input: AssessmentInput): AssessmentResult {
   // Base Risk Calculation
   let overallRisk = topCandidate.score;
 
+  // Rule Severity & Zoonotic Threat Modifiers
+  if (topCandidate.rule.baseSeverity === 'CRITICAL') {
+    overallRisk += 15;
+    contributingFactors.push(`High priority pathogen tier: ${topCandidate.rule.name} carries high clinical mortality index (+15% risk)`);
+  } else if (topCandidate.rule.baseSeverity === 'HIGH') {
+    overallRisk += 8;
+  }
+
+  if (topCandidate.rule.zoonotic) {
+    overallRisk += 10;
+    contributingFactors.push('ZOONOTIC THREAT ALERT: Pathogen carries transmissibility risk to human handlers (+10% bio-risk)');
+  }
+
   // Severity Modifier
   if (severity === 'CRITICAL') {
     overallRisk += 20;

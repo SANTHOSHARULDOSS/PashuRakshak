@@ -4,12 +4,13 @@ import { db } from '../db/db.js';
 
 const router = Router();
 
-// IVR Simulation Endpoint
-router.post('/simulate', (req, res) => {
+// Process IVR Call simulation
+router.post(['/simulate', '/call'], (req, res) => {
   const {
-    caller_phone = '+919822012345',
+    callerPhone,
+    caller_phone = callerPhone || '+919822012345',
     language = 'mr', // 'mr' | 'hi' | 'en'
-    menu_selection,  // 1: Report, 2: Vaccine, 3: Vet Helpline, 4: Outbreak Advisory
+    menu_selection = req.body.speciesChoice || req.body.symptomChoice,  // 1: Report, 2: Vaccine, 3: Vet Helpline, 4: Outbreak Advisory
     ear_tag_or_symptoms
   } = req.body;
 
@@ -18,6 +19,7 @@ router.post('/simulate', (req, res) => {
     let marathiPrompt = '';
     let actionTaken = '';
     let smsDispatched = null;
+    const caseNumber = `IVR-MH-${Math.floor(100000 + Math.random() * 900000)}`;
 
     if (!menu_selection) {
       // Step 1: Main Welcome Menu
@@ -93,6 +95,11 @@ router.post('/simulate', (req, res) => {
       promptAudioText: responseText,
       actionTaken,
       smsDispatched,
+      callRecord: {
+        case_number: caseNumber,
+        caller: caller_phone,
+        status: 'DISPATCHED'
+      },
       timestamp: new Date().toISOString()
     });
   } catch (err: any) {

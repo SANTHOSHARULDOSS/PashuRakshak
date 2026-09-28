@@ -77,10 +77,11 @@ app.use('/api/dashboard', dashboardRoutes);
 const distDir = path.resolve(__dirname, '../../dist');
 if (fs.existsSync(distDir)) {
   app.use(express.static(distDir));
-  app.get('*', (req, res) => {
-    if (!req.path.startsWith('/api')) {
-      res.sendFile(path.join(distDir, 'index.html'));
+  app.use((req, res, next) => {
+    if (req.method === 'GET' && !req.path.startsWith('/api')) {
+      return res.sendFile(path.join(distDir, 'index.html'));
     }
+    next();
   });
 }
 

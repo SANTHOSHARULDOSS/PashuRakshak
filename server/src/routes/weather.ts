@@ -80,7 +80,10 @@ router.get('/:district', (req, res) => {
     success: true,
     district: district || 'Pune',
     isRealtimeDemoFeed: true,
-    data: weather
+    data: {
+      ...weather,
+      vector_activity_index: weather.vector_risk
+    }
   });
 });
 

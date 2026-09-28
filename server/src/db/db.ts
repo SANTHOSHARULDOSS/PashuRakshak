@@ -198,6 +198,25 @@ class MemoryDB {
       },
 
       all(...args: any[]): any[] {
+        // Standalone Haversine calculation query (e.g. SELECT haversine_distance(...) as d)
+        if (trimmed.includes('haversine_distance(')) {
+          const directMatch = trimmed.match(/haversine_distance\(\s*([\d.-]+)\s*,\s*([\d.-]+)\s*,\s*([\d.-]+)\s*,\s*([\d.-]+)\s*\)/i);
+          if (directMatch) {
+            const lat1 = parseFloat(directMatch[1]);
+            const lon1 = parseFloat(directMatch[2]);
+            const lat2 = parseFloat(directMatch[3]);
+            const lon2 = parseFloat(directMatch[4]);
+            const R = 6371;
+            const dLat = (lat2 - lat1) * (Math.PI / 180);
+            const dLon = (lon2 - lon1) * (Math.PI / 180);
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                      Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const dist = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return [{ d: dist, distance: dist }];
+          }
+        }
+
         // COUNT Queries
         if (trimmed.includes('COUNT(*)')) {
           const match = trimmed.match(/FROM (\w+)/i);
@@ -219,7 +238,9 @@ class MemoryDB {
               list = list.filter((r: any) => r.district === args[0]);
             }
 
-            return [{ count: list.length }];
+            const aliasMatch = trimmed.match(/COUNT\(\*\)\s+as\s+(\w+)/i);
+            const alias = aliasMatch ? aliasMatch[1] : 'count';
+            return [{ count: list.length, c: list.length, [alias]: list.length }];
           }
         }
 

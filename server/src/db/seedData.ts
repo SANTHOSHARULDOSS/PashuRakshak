@@ -407,6 +407,42 @@ export async function generateSeedData() {
       administered_by: 'Sunil Shinde',
       status: 'COMPLETED',
       remarks: 'Routine bi-annual vaccination drive.'
+    },
+    {
+      id: 'vac_rec_003',
+      animal_id: 'ani_goat_01',
+      vaccine_name: 'PPR Live Attenuated Vaccine',
+      batch_no: 'PPR-L-2026-11',
+      dose_number: 1,
+      administered_date: '2026-04-10',
+      next_due_date: '2027-04-10',
+      administered_by: 'Sunita More',
+      status: 'COMPLETED',
+      remarks: 'Administered under National PPR Eradication Programme.'
+    },
+    {
+      id: 'vac_rec_004',
+      animal_id: 'ani_cow_04',
+      vaccine_name: 'Haemorrhagic Septicaemia Oil Adjuvant Vaccine (HS)',
+      batch_no: 'HS-OA-2026-52',
+      dose_number: 1,
+      administered_date: '2026-03-12',
+      next_due_date: '2027-03-12',
+      administered_by: 'Dr. Priya Kulkarni',
+      status: 'COMPLETED',
+      remarks: 'Pre-monsoon booster dose administered.'
+    },
+    {
+      id: 'vac_rec_005',
+      animal_id: 'ani_cow_01',
+      vaccine_name: 'Brucellosis S19 Calfhood Vaccine',
+      batch_no: 'BRU-S19-2025-99',
+      dose_number: 1,
+      administered_date: '2025-11-05',
+      next_due_date: '2027-11-05',
+      administered_by: 'Dr. Anand Deshmukh',
+      status: 'COMPLETED',
+      remarks: 'Single dose calfhood immunization.'
     }
   ];
 
