@@ -8,6 +8,7 @@
     "dev:client": "vite",
     "dev:server": "tsx server/src/index.ts",
     "build": "tsc && vite build",
+    "start": "tsx server/src/index.ts",
     "preview": "vite preview",
     "seed": "tsx server/src/db/seed.ts"
   },

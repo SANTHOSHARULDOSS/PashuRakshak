@@ -73,6 +73,17 @@ app.use('/api/sync', syncRoutes);
 app.use('/api/audit-logs', auditRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
+// Production Frontend Static Serving & SPA Fallback
+const distDir = path.resolve(__dirname, '../../dist');
+if (fs.existsSync(distDir)) {
+  app.use(express.static(distDir));
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(path.join(distDir, 'index.html'));
+    }
+  });
+}
+
 // Auto-seed and start server
 async function startServer() {
   try {
