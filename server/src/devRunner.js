@@ -1,25 +1,30 @@
 import { spawn } from 'child_process';
-import os from 'os';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '../..');
 
 console.log('=============================================================');
 console.log(' 🛡️  Starting PashuRakshak Full-Stack Development Environment');
 console.log(' 📍  Govt of Maharashtra Livestock Health Intelligence System');
 console.log('=============================================================\n');
 
-const isWin = os.platform() === 'win32';
-const npxCmd = isWin ? 'npx.cmd' : 'npx';
+const viteBin = path.join(rootDir, 'node_modules', 'vite', 'bin', 'vite.js');
+const tsxBin = path.join(rootDir, 'node_modules', 'tsx', 'dist', 'cli.mjs');
 
 // 1. Start Backend Server
-const server = spawn(npxCmd, ['tsx', 'server/src/index.ts'], {
+const server = spawn(process.execPath, [tsxBin, path.join(__dirname, 'index.ts')], {
   stdio: 'inherit',
-  shell: true,
+  cwd: rootDir,
   env: { ...process.env, PORT: '5000' }
 });
 
 // 2. Start Frontend Vite Client
-const client = spawn(npxCmd, ['vite', '--host'], {
+const client = spawn(process.execPath, [viteBin, '--host'], {
   stdio: 'inherit',
-  shell: true
+  cwd: rootDir
 });
 
 function cleanup() {
