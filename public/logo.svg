@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3f6f" />
+      <stop offset="100%" stop-color="#0259a1" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <!-- Outer Shield -->
+  <path d="M50 8 L85 22 C85 58 50 90 50 90 C50 90 15 58 15 22 Z" fill="url(#shieldGrad)" stroke="#f59e0b" stroke-width="2.5" />
+  <!-- Inner ring -->
+  <path d="M50 14 L79 26 C79 55 50 82 50 82 C50 82 21 55 21 26 Z" fill="#072748" opacity="0.6"/>
+  <!-- Medical Cross / Shield Icon -->
+  <rect x="45" y="32" width="10" height="26" rx="2" fill="url(#goldGrad)"/>
+  <rect x="37" y="40" width="26" height="10" rx="2" fill="url(#goldGrad)"/>
+  <!-- Livestock Horns / Crown Curve -->
+  <path d="M30 38 C32 24 42 22 50 28 C58 22 68 24 70 38 C64 34 58 35 50 40 C42 35 36 34 30 38 Z" fill="#ffffff" />
+  <!-- Pulse Wave Line -->
+  <path d="M26 62 L38 62 L43 54 L48 70 L53 58 L57 65 L61 62 L74 62" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

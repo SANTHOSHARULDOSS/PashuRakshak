@@ -1,0 +1,19 @@
+{
+  "name": "PashuRakshak — Maharashtra Livestock Health Intelligence Platform",
+  "short_name": "PashuRakshak",
+  "description": "AI-assisted offline-first livestock disease surveillance & early-warning platform for Maharashtra",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b3f6f",
+  "theme_color": "#0b3f6f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["government", "health", "agriculture", "veterinary"]
+}

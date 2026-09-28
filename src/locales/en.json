@@ -1,0 +1,102 @@
+{
+  "app": {
+    "title": "PashuRakshak",
+    "subtitle": "Maharashtra Livestock Health Intelligence Platform",
+    "tagline": "Detect Early. Respond Faster. Protect Livestock.",
+    "govtTitle": "Government of Maharashtra",
+    "deptTitle": "Department of Animal Husbandry & MSInS",
+    "tollFree": "24x7 Pashu Sanjeevani Helpline: 1800-180-1551",
+    "emergencyAmbulance": "Mobile Vet Ambulance: 1962"
+  },
+  "roles": {
+    "FARMER": "Farmer (शेतकरी)",
+    "FIELD_VET": "Field Veterinarian (पशुवैद्यकीय अधिकारी)",
+    "PARA_VET": "Para-Veterinary Worker (पशुधन पर्यवेक्षक)",
+    "LAB_TECH": "Lab Pathologist / Technician (प्रयोगशाळा तंत्रज्ञ)",
+    "DISTRICT_ADMIN": "District Animal Husbandry Officer (जिल्हा अधिकारी)",
+    "STATE_ADMIN": "State Livestock Surveillance Director (राज्य संचालक)"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "myAnimals": "My Animals",
+    "reportIssue": "Report Health Issue",
+    "cases": "Case Management",
+    "gisMap": "Surveillance Map (GIS)",
+    "labSamples": "Diagnostic Lab",
+    "vaccinations": "Vaccinations",
+    "outbreaks": "Outbreak Clusters",
+    "advisories": "Advisories & Alerts",
+    "vetSupport": "Veterinary Centers",
+    "auditLogs": "Audit Trail",
+    "ivrHelpline": "IVR Telephony",
+    "reportsExport": "Reports & Bulletins",
+    "demoMode": "SIH Demo Tour"
+  },
+  "status": {
+    "OPEN": "Reported",
+    "ASSIGNED": "Vet Assigned",
+    "UNDER_REVIEW": "Under Clinical Review",
+    "SAMPLE_REQUIRED": "Sample Required",
+    "LAB_PENDING": "Lab Analysis Pending",
+    "DIAGNOSIS_AVAILABLE": "Diagnosis Available",
+    "TREATMENT_STARTED": "Treatment Active",
+    "CONTAINMENT": "Containment Zone Active",
+    "RESOLVED": "Resolved / Recovered",
+    "HEALTHY": "Healthy",
+    "SICK": "Sick / Symptomatic",
+    "ISOLATED": "Quarantined",
+    "DECEASED": "Deceased",
+    "UP_TO_DATE": "Vaccinated (Up to date)",
+    "DUE_SOON": "Due Soon",
+    "OVERDUE": "Vaccine Overdue",
+    "UNVACCINATED": "Unvaccinated"
+  },
+  "severity": {
+    "LOW": "Low Severity",
+    "MEDIUM": "Moderate Severity",
+    "HIGH": "High Severity",
+    "CRITICAL": "Critical / Emergency"
+  },
+  "species": {
+    "Cattle": "Cattle (गाय / बैल)",
+    "Buffalo": "Buffalo (म्हैस / रेडा)",
+    "Goat": "Goat (शेळी / बोकड)",
+    "Sheep": "Sheep (मेंढी)",
+    "Pig": "Pig (डुक्कर)",
+    "Poultry": "Poultry (कुक्कुटपालन / कोंबडी)"
+  },
+  "symptoms": {
+    "Fever": "High Fever (ताप)",
+    "Skin lesions": "Skin Nodules / Lumps (अंगावर गाठी / फोड)",
+    "Swelling": "Swelling in Neck/Limbs (सूज)",
+    "Cough": "Cough / Respiratory Distress (खोकला / धाप लागणे)",
+    "Nasal discharge": "Nasal / Eye Discharge (नाकातून पाणी गळणे)",
+    "Excessive salivation": "Excessive Ropy Salivation (तोंडातून लाळ गळणे)",
+    "Reduced milk production": "Sudden Drop in Milk (दूध घटणे)",
+    "Loss of appetite": "Loss of Appetite / Not Feeding (चारा न खाणे)",
+    "Diarrhea": "Diarrhea / Loose Motion (हगवण)",
+    "Lameness": "Lameness / Limping (लंगडणे)",
+    "Weakness": "Extreme Weakness / Inability to Stand (अशक्तपणा)",
+    "Sudden mortality": "Sudden Mortality / Death (अचानक मृत्यू)",
+    "Abortion": "Abortion / Premature Birth (गर्भपात)",
+    "Neurological symptoms": "Circling / Tremors / Fits (फेफरे / चक्कर)"
+  },
+  "offline": {
+    "online": "Online",
+    "offline": "Offline Mode",
+    "syncing": "Syncing Data...",
+    "pendingCount": "pending offline reports",
+    "syncNow": "Sync Now",
+    "conflictAlert": "Sync Conflict Detected",
+    "allSynced": "All records synchronized with server"
+  },
+  "ai": {
+    "title": "AI Clinical Risk Engine",
+    "disclaimer": "AI-assisted preliminary assessment — veterinary confirmation required.",
+    "riskScore": "Calculated Risk Score",
+    "differentialDiagnosis": "Differential Diagnosis Possibilities",
+    "confidence": "Confidence",
+    "contributingFactors": "Explainable Risk Factors",
+    "recommendedProtocol": "Immediate Containment & Treatment Protocol"
+  }
+}

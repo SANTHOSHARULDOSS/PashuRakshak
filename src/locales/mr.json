@@ -1,0 +1,102 @@
+{
+  "app": {
+    "title": "पशुरक्षक",
+    "subtitle": "महाराष्ट्र पशु आरोग्य बुद्धिमत्ता व्यासपीठ",
+    "tagline": "लवकर ओळखा. वेगाने प्रतिसाद द्या. पशुधन वाचवा.",
+    "govtTitle": "महाराष्ट्र शासन",
+    "deptTitle": "पशुसंवर्धन विभाग आणि MSInS",
+    "tollFree": "२४x७ पशुसंजीवनी हेल्पलाईन: १८००-१८०-१५५१",
+    "emergencyAmbulance": "फिरता पशुवैद्यकीय दवाखाना: १९६२"
+  },
+  "roles": {
+    "FARMER": "शेतकरी (Farmer)",
+    "FIELD_VET": "पशुवैद्यकीय अधिकारी (Field Vet)",
+    "PARA_VET": "पशुधन पर्यवेक्षक (Para-Vet)",
+    "LAB_TECH": "रोग निदान प्रयोगशाळा तंत्रज्ञ (Lab Tech)",
+    "DISTRICT_ADMIN": "जिल्हा पशुसंवर्धन अधिकारी (District Admin)",
+    "STATE_ADMIN": "राज्य पशु आरोग्य संचालक (State Admin)"
+  },
+  "nav": {
+    "dashboard": "मुख्य फलक",
+    "myAnimals": "माझी जनावरे",
+    "reportIssue": "आजार नोंदवा",
+    "cases": "केस व्यवस्थापन",
+    "gisMap": "रोग नकाशा (GIS)",
+    "labSamples": "प्रयोगशाळा नमुने",
+    "vaccinations": "लसीकरण नोंद",
+    "outbreaks": "उद्रेक क्षेत्रे",
+    "advisories": "सतर्कता व सूचना",
+    "vetSupport": "नजीकचा दवाखाना",
+    "auditLogs": "ऑडिट नोंदी",
+    "ivrHelpline": "IVR हेल्पलाईन",
+    "reportsExport": "अहवाल व बुलेटिन",
+    "demoMode": "SIH प्रात्यक्षिक"
+  },
+  "status": {
+    "OPEN": "नोंदणी झाली",
+    "ASSIGNED": "डॉक्टर नियुक्त",
+    "UNDER_REVIEW": "तपासणी सुरू",
+    "SAMPLE_REQUIRED": "नमुना आवश्यक",
+    "LAB_PENDING": "प्रयोगशाळा तपासणी प्रलंबित",
+    "DIAGNOSIS_AVAILABLE": "निदान उपलब्ध",
+    "TREATMENT_STARTED": "उपचार सुरू",
+    "CONTAINMENT": "नियंत्रण क्षेत्र सक्रिय",
+    "RESOLVED": "बरे झाले / पूर्ण",
+    "HEALTHY": "निरोगी",
+    "SICK": "आजारी",
+    "ISOLATED": "विलगीकरणात",
+    "DECEASED": "मृत्यू",
+    "UP_TO_DATE": "लसीकरण पूर्ण",
+    "DUE_SOON": "लसीकरण जवळ आले",
+    "OVERDUE": "लसीकरण थकीत",
+    "UNVACCINATED": "लस दिलेली नाही"
+  },
+  "severity": {
+    "LOW": "कमी तीव्रता (Low)",
+    "MEDIUM": "मध्यम तीव्रता (Medium)",
+    "HIGH": "उच्च तीव्रता (High)",
+    "CRITICAL": "अतिगंभीर / तात्काळ (Critical)"
+  },
+  "species": {
+    "Cattle": "गाय / बैल (Cattle)",
+    "Buffalo": "म्हैस / रेडा (Buffalo)",
+    "Goat": "शेळी / बोकड (Goat)",
+    "Sheep": "मेंढी (Sheep)",
+    "Pig": "डुक्कर (Pig)",
+    "Poultry": "कुक्कुटपालन / कोंबडी (Poultry)"
+  },
+  "symptoms": {
+    "Fever": "अंगात कडक ताप (Fever)",
+    "Skin lesions": "अंगावर गाठी व फोड (Skin lesions / Lumps)",
+    "Swelling": "गळ्याजवळ किंवा पायावर सूज (Swelling)",
+    "Cough": "खोकला व धाप लागणे (Cough)",
+    "Nasal discharge": "नाकातून व डोळ्यातून पाणी (Nasal discharge)",
+    "Excessive salivation": "तोंडातून फेसळ लाळ गळणे (Excessive salivation)",
+    "Reduced milk production": "दुधात अचानक घट (Reduced milk production)",
+    "Loss of appetite": "चारा पाणी बंद / सुस्त (Loss of appetite)",
+    "Diarrhea": "पातळ हगवण (Diarrhea)",
+    "Lameness": "लंगडणे व पायात जखमा (Lameness)",
+    "Weakness": "अशक्तपणा / उभे राहता न येणे (Weakness)",
+    "Sudden mortality": "जनावराचा अचानक मृत्यू (Sudden mortality)",
+    "Abortion": "गाभण जनावराचा गर्भपात (Abortion)",
+    "Neurological symptoms": "चक्कर येणे व थरथर (Neurological symptoms)"
+  },
+  "offline": {
+    "online": "ऑनलाइन",
+    "offline": "ऑफलाइन मोड (इंटरनेट नाही)",
+    "syncing": "माहिती सिंक होत आहे...",
+    "pendingCount": "प्रलंबित ऑफलाइन नोंदी",
+    "syncNow": "आता सिंक करा",
+    "conflictAlert": "डेटा संघर्ष आढळला",
+    "allSynced": "सर्व नोंदी सर्व्हरशी सिंक झाल्या आहेत"
+  },
+  "ai": {
+    "title": "AI आजार जोखीम विश्लेषण प्रणाली",
+    "disclaimer": "AI-साहाय्यित प्राथमिक अंदाज — पशुवैद्यकीय डॉक्टरांचे अंतिम निदान आवश्यक आहे.",
+    "riskScore": "एकूण जोखीम गुण (Risk Score)",
+    "differentialDiagnosis": "संभाव्य आजार निदान",
+    "confidence": "अचूकता विश्वासार्हता",
+    "contributingFactors": "जोखीम वाढवणारे प्रमुख घटक",
+    "recommendedProtocol": "डॉक्टरांनी करावयाची तात्काळ कृती व उपचार"
+  }
+}
