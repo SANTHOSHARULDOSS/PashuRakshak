@@ -141,12 +141,13 @@
       "district": "Pune",
       "latitude": 18.8247,
       "longitude": 74.3412,
-      "health_status": "SICK",
+      "health_status": "ani_cow_01",
       "vaccination_status": "OVERDUE",
       "last_vaccination_date": "2025-08-10",
       "next_vaccination_due": "2026-02-10",
       "previous_diseases": "[\"Mastitis (2024)\"]",
-      "photo_url": "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=600&auto=format&fit=crop&q=80"
+      "photo_url": "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=600&auto=format&fit=crop&q=80",
+      "updated_at": "2026-09-28T16:16:52.883Z"
     },
     {
       "id": "ani_cow_02",
@@ -267,12 +268,13 @@
       "district": "Pune",
       "status": "SAMPLE_REQUIRED",
       "assigned_vet_id": "usr_vet_01",
-      "vet_notes": "Clinical signs strongly indicate Lumpy Skin Disease (LSD). High fever, firm nodular cutaneous eruptions across neck and torso. Ordered diagnostic swab & blood sample for PCR confirmation. Advised strict animal isolation.",
+      "vet_notes": "Demonstration clinical examination: Generalized cutaneous nodular eruptions. Ordered PCR lab sample.",
       "diagnosis": "Suspected Lumpy Skin Disease (Capripoxvirus)",
       "treatment_plan": "1. Isolation in insect-screened shed. 2. Antipyretic: Meloxicam 0.5 mg/kg IM. 3. Antiseptic spray on ulcerated nodules. 4. Supportive Vitamin B-Complex.",
       "quarantine_ordered": 1,
       "sync_status": "SYNCED",
-      "created_at": "2026-09-27T20:36:52.271Z"
+      "created_at": "2026-09-27T20:36:52.271Z",
+      "updated_at": "2026-09-28T16:16:43.573Z"
     },
     {
       "id": "rep_fmd_002",
@@ -321,6 +323,27 @@
       "quarantine_ordered": 0,
       "sync_status": "SYNCED",
       "created_at": "2026-09-25T14:36:52.273Z"
+    },
+    {
+      "id": "rep_86a34e6c",
+      "local_id": "loc_rep_1790612212855",
+      "animal_id": "ani_cow_01",
+      "reporter_id": "usr_farmer_01",
+      "symptoms": "[\"Swelling\"]",
+      "severity": "HIGH",
+      "temperature_f": 104.5,
+      "photo_url": "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=600&auto=format&fit=crop&q=80",
+      "audio_url": null,
+      "latitude": 18.8247,
+      "longitude": 74.3412,
+      "village": "Nighoj",
+      "taluka": "Shirur",
+      "district": "Pune",
+      "status": "OPEN",
+      "assigned_vet_id": "usr_farmer_01",
+      "sync_status": null,
+      "created_at": null,
+      "updated_at": null
     }
   ],
   "risk_assessments": [
@@ -331,10 +354,46 @@
       "risk_level": "CRITICAL",
       "primary_suspected_disease": "Lumpy Skin Disease (LSD)",
       "confidence_percentage": 62,
-      "differential_diagnoses": "[{\"disease\":\"Lumpy Skin Disease (LSD)\",\"marathiName\":\"लम्पी त्वचा रोग\",\"code\":\"LSD\",\"confidence\":62,\"reason\":\"Presents hallmark symptoms: Skin lesions, Fever; Key clinical markers observed: Reduced milk production, Excessive salivation\",\"recommendedTest\":\"Real-time PCR (Capripoxvirus)\"},{\"disease\":\"Foot and Mouth Disease (FMD)\",\"marathiName\":\"लाळ्या खुरकूत रोग\",\"code\":\"FMD\",\"confidence\":39,\"reason\":\"Presents hallmark symptoms: Excessive salivation; Key clinical markers observed: Fever, Reduced milk production\",\"recommendedTest\":\"Antigen ELISA & RT-PCR (Aphthovirus)\"},{\"disease\":\"Hemorrhagic Septicemia (HS)\",\"marathiName\":\"घटसर्प रोग\",\"code\":\"HS\",\"confidence\":31,\"reason\":\"Presents hallmark symptoms: Fever; Key clinical markers observed: Excessive salivation\",\"recommendedTest\":\"Pasteurella multocida Culture & PCR\"}]",
-      "contributing_factors": "[\"Elevated acute symptom severity (+10% risk)\",\"Observable dermal lesions matching Poxviridae/LSD pathology profile\",\"High pyrexia recorded at 104.8°F (+10% risk)\",\"Livestock vaccination is OVERDUE (+15% vulnerability risk)\",\"Agro-meteorological conditions (78% humidity) favor arthropod vector transmission\"]",
+      "differential_diagnoses": [
+        {
+          "disease": "Lumpy Skin Disease (LSD)",
+          "marathiName": "लम्पी त्वचा रोग",
+          "code": "LSD",
+          "confidence": 62,
+          "reason": "Presents hallmark symptoms: Skin lesions, Fever; Key clinical markers observed: Reduced milk production, Excessive salivation",
+          "recommendedTest": "Real-time PCR (Capripoxvirus)"
+        },
+        {
+          "disease": "Foot and Mouth Disease (FMD)",
+          "marathiName": "लाळ्या खुरकूत रोग",
+          "code": "FMD",
+          "confidence": 39,
+          "reason": "Presents hallmark symptoms: Excessive salivation; Key clinical markers observed: Fever, Reduced milk production",
+          "recommendedTest": "Antigen ELISA & RT-PCR (Aphthovirus)"
+        },
+        {
+          "disease": "Hemorrhagic Septicemia (HS)",
+          "marathiName": "घटसर्प रोग",
+          "code": "HS",
+          "confidence": 31,
+          "reason": "Presents hallmark symptoms: Fever; Key clinical markers observed: Excessive salivation",
+          "recommendedTest": "Pasteurella multocida Culture & PCR"
+        }
+      ],
+      "contributing_factors": [
+        "Elevated acute symptom severity (+10% risk)",
+        "Observable dermal lesions matching Poxviridae/LSD pathology profile",
+        "High pyrexia recorded at 104.8°F (+10% risk)",
+        "Livestock vaccination is OVERDUE (+15% vulnerability risk)",
+        "Agro-meteorological conditions (78% humidity) favor arthropod vector transmission"
+      ],
       "recommended_action": "Strict isolation of affected animal, mosquito/fly vector control, and ring vaccination (Goat Pox vaccine) within 5 km radius.",
-      "weather_factors": "{\"temp_c\":29.5,\"humidity_pct\":78,\"vector_risk\":\"HIGH (Elevated Stomoxys / Tabanid biting fly activity)\",\"rainfall_anomaly\":\"+12% above seasonal average\"}",
+      "weather_factors": {
+        "temp_c": 29.5,
+        "humidity_pct": 78,
+        "vector_risk": "HIGH (Elevated Stomoxys / Tabanid biting fly activity)",
+        "rainfall_anomaly": "+12% above seasonal average"
+      },
       "cluster_alert_flag": 0,
       "created_at": "2026-09-27T20:36:52.271Z"
     },
@@ -365,6 +424,20 @@
       "weather_factors": "{\"temp_c\":29.5,\"humidity_pct\":78,\"vector_risk\":\"HIGH (Elevated Stomoxys / Tabanid biting fly activity)\",\"rainfall_anomaly\":\"+12% above seasonal average\"}",
       "cluster_alert_flag": 0,
       "created_at": "2026-09-25T14:36:52.273Z"
+    },
+    {
+      "id": "risk_rep_86a34e6c",
+      "report_id": "rep_86a34e6c",
+      "risk_score": 88,
+      "risk_level": "CRITICAL",
+      "primary_suspected_disease": "Hemorrhagic Septicemia (HS)",
+      "confidence_percentage": 25,
+      "differential_diagnoses": "[{\"disease\":\"Hemorrhagic Septicemia (HS)\",\"marathiName\":\"घटसर्प रोग\",\"code\":\"HS\",\"confidence\":25,\"reason\":\"Presents hallmark symptoms: Swelling\",\"recommendedTest\":\"Pasteurella multocida Culture & PCR\"},{\"disease\":\"Black Quarter (BQ)\",\"marathiName\":\"फऱ्या रोग\",\"code\":\"BQ\",\"confidence\":25,\"reason\":\"Presents hallmark symptoms: Swelling\",\"recommendedTest\":\"Clostridium chauvoei fluorescent antibody test (FAT)\"}]",
+      "contributing_factors": "[\"High priority pathogen tier: Hemorrhagic Septicemia (HS) carries high clinical mortality index (+15% risk)\",\"Elevated acute symptom severity (+10% risk)\",\"High pyrexia recorded at 104.5°F (+10% risk)\",\"Livestock vaccination is OVERDUE (+15% vulnerability risk)\",\"Localized case activity: 3 concurrent reports in surrounding area\",\"Agro-meteorological conditions (78% humidity) favor arthropod vector transmission\"]",
+      "recommended_action": "Immediate parenteral antibiotics (Oxytetracycline / Enrofloxacin), anti-inflammatory treatment, ring vaccination of surrounding herds.",
+      "weather_factors": "{\"temp_c\":29.5,\"humidity_pct\":78,\"vector_risk\":\"HIGH (Elevated Stomoxys / Tabanid biting fly activity)\",\"rainfall_anomaly\":\"+12% above seasonal average\"}",
+      "cluster_alert_flag": 0,
+      "created_at": null
     }
   ],
   "lab_samples": [
@@ -575,6 +648,20 @@
       "related_report_id": "rep_fmd_002",
       "is_read": 0,
       "created_at": "2026-09-28T12:36:52.273Z"
+    },
+    {
+      "id": "alt_239e7929",
+      "alert_type": "High-Risk Case: Hemorrhagic Septicemia (HS) (Ear Tag: MH-PUN-001892)",
+      "title": "AI Risk Score 88/100 (CRITICAL). Symptoms: Swelling in Nighoj, Shirur.",
+      "message": "CRITICAL",
+      "severity": "Pune",
+      "target_role": "Shirur",
+      "target_district": "usr_farmer_01",
+      "target_taluka": "rep_86a34e6c",
+      "target_user_id": null,
+      "related_report_id": null,
+      "is_read": null,
+      "created_at": null
     }
   ],
   "audit_logs": [
@@ -742,6 +829,214 @@
       "action": "DEMO_SWITCH_LOGIN",
       "entity": "User",
       "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_168a1dc5",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_2973907a",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_aa79aa0e",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_0e31eee8",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_503b5cac",
+      "user_id": "usr_vet_01",
+      "user_name": "Dr. Anand Deshmukh (B.V.Sc & A.H)",
+      "user_role": "FIELD_VET",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_vet_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_0d90243b",
+      "user_id": "usr_vet_01",
+      "user_name": "Dr. Anand Deshmukh (B.V.Sc & A.H)",
+      "user_role": "FIELD_VET",
+      "action": "VET_CASE_UPDATE",
+      "entity": "HealthReport",
+      "entity_id": "rep_lsd_001",
+      "prev_value": "SAMPLE_REQUIRED",
+      "new_value": "SAMPLE_REQUIRED",
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_37678bbe",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_2fea2967",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_6e958bf8",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "SUBMIT_HEALTH_REPORT",
+      "entity": "HealthReport",
+      "entity_id": "rep_86a34e6c",
+      "prev_value": null,
+      "new_value": "{\"ear_tag_id\":\"MH-PUN-001892\",\"symptoms\":[\"Swelling\"],\"risk_score\":88}",
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_6763ca6c",
+      "user_id": "usr_vet_01",
+      "user_name": "Dr. Anand Deshmukh (B.V.Sc & A.H)",
+      "user_role": "FIELD_VET",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_vet_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_d67c0299",
+      "user_id": "usr_paravet_01",
+      "user_name": "Sunil Shinde (Livestock Supervisor)",
+      "user_role": "PARA_VET",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_paravet_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_719a97d6",
+      "user_id": "usr_state_admin_01",
+      "user_name": "Dr. Vilas Gaikwad (State Livestock Surveillance Director)",
+      "user_role": "STATE_ADMIN",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_state_admin_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_5b51a5ab",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_33012932",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_ece09bab",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_596dacc2",
+      "user_id": "usr_state_admin_01",
+      "user_name": "Dr. Vilas Gaikwad (State Livestock Surveillance Director)",
+      "user_role": "STATE_ADMIN",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_state_admin_01",
       "prev_value": null,
       "new_value": null,
       "ip_address": "::1",

@@ -26,7 +26,7 @@ Fill in the following fields:
 | **Region** | Singapore / Frankfurt / Oregon (any) |
 | **Branch** | `main` |
 | **Runtime** | `Node` |
-| **Build Command** | `npm install && npm run build` |
+| **Build Command** | `npm install --include=dev && npm run build` |
 | **Start Command** | `npm start` |
 | **Instance Type** | `Free` ($0/month) |
 
