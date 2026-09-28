@@ -720,6 +720,32 @@
       "new_value": null,
       "ip_address": "::1",
       "timestamp": null
+    },
+    {
+      "id": "aud_b7abd29d",
+      "user_id": "usr_state_admin_01",
+      "user_name": "Dr. Vilas Gaikwad (State Livestock Surveillance Director)",
+      "user_role": "STATE_ADMIN",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_state_admin_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
+    },
+    {
+      "id": "aud_17609a67",
+      "user_id": "usr_farmer_01",
+      "user_name": "Ramesh Tukaram Patil",
+      "user_role": "FARMER",
+      "action": "DEMO_SWITCH_LOGIN",
+      "entity": "User",
+      "entity_id": "usr_farmer_01",
+      "prev_value": null,
+      "new_value": null,
+      "ip_address": "::1",
+      "timestamp": null
     }
   ],
   "sync_conflicts": []
